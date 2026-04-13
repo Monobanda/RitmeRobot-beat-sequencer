@@ -1,0 +1,278 @@
+[gd_scene load_steps=7 format=3 uid="uid://bpbqks1sddams"]
+
+[ext_resource type="PackedScene" uid="uid://c6tcokam0n84t" path="res://Scenes/Beat Ring Buttons/beat_stomp_button.tscn" id="2_xtkx8"]
+[ext_resource type="PackedScene" uid="uid://dp3x302n4n3se" path="res://Scenes/Beat Ring Buttons/beat_klap_button.tscn" id="3_lgoih"]
+[ext_resource type="PackedScene" uid="uid://cirxgl8i4roch" path="res://Scenes/Beat Ring Buttons/beat_trumpet_button.tscn" id="4_5ts78"]
+[ext_resource type="PackedScene" uid="uid://djmbkapkesy4e" path="res://Scenes/Beat Ring Buttons/beathihat_button.tscn" id="5_fs87k"]
+[ext_resource type="PackedScene" uid="uid://cdeh3omwufpo6" path="res://Scenes/objects/pointer.tscn" id="6_nc0bc"]
+[ext_resource type="Script" uid="uid://d0xj5tscyc8l0" path="res://Scripts/Objects/pointer.gd" id="7_a5c8e"]
+
+[node name="BeatRing" type="Node2D"]
+position = Vector2(0, -1)
+
+[node name="StompRing" type="Node2D" parent="."]
+
+[node name="BeatStompButton" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(1.4450355e-14, -236)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton2" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(90.313286, -218.03557)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton3" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(166.8772, -166.8772)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton4" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(218.03557, -90.313286)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton5" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(236, 0)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton6" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(218.03557, 90.313286)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton7" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(166.8772, 166.8772)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton8" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(90.313286, 218.03557)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton9" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(1.4450355e-14, 236)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton10" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(-90.313286, 218.03557)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton11" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(-166.8772, 166.8772)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton12" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(-218.03557, 90.313286)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton13" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(-236, 2.890071e-14)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton14" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(-218.03557, -90.313286)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton15" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(-166.8772, -166.8772)
+scale = Vector2(1, 1)
+
+[node name="BeatStompButton16" parent="StompRing" instance=ExtResource("2_xtkx8")]
+position = Vector2(-90.313286, -218.03557)
+scale = Vector2(1, 1)
+
+[node name="KlapRing" type="Node2D" parent="."]
+
+[node name="BeatKlapButton" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(1.1694991e-14, -191)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton2" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(73.09254, -176.46098)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton3" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(135.05739, -135.05739)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton4" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(176.46098, -73.09254)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton5" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(191, 0)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton6" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(176.46098, 73.09254)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton7" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(135.05739, 135.05739)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton8" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(73.09254, 176.46098)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton9" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(1.1694991e-14, 191)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton10" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(-73.09254, 176.46098)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton11" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(-135.05739, 135.05739)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton12" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(-176.46098, 73.09254)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton13" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(-191, 2.3389981e-14)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton14" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(-176.46098, -73.09254)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton15" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(-135.05739, -135.05739)
+scale = Vector2(1, 1)
+
+[node name="BeatKlapButton16" parent="KlapRing" instance=ExtResource("3_lgoih")]
+position = Vector2(-73.09254, -176.46098)
+scale = Vector2(1, 1)
+
+[node name="HihatRing" type="Node2D" parent="."]
+
+[node name="BeathihatButton" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(6.184262e-15, -101)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton2" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(38.651028, -93.31183)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton3" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(71.417786, -71.417786)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton4" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(93.31183, -38.651028)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton5" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(101, 0)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton6" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(93.31183, 38.651028)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton7" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(71.417786, 71.417786)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton8" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(38.651028, 93.31183)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton9" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(6.184262e-15, 101)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton10" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(-38.651028, 93.31183)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton11" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(-71.417786, 71.417786)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton12" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(-93.31183, 38.651028)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton13" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(-101, 1.2368524e-14)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton14" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(-93.31183, -38.651028)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton15" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(-71.417786, -71.417786)
+scale = Vector2(1, 1)
+
+[node name="BeathihatButton16" parent="HihatRing" instance=ExtResource("5_fs87k")]
+position = Vector2(-38.651028, -93.31183)
+scale = Vector2(1, 1)
+
+[node name="TrompetRing" type="Node2D" parent="."]
+
+[node name="BeatTrumpetButton" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(8.939626e-15, -146)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton2" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(55.87178, -134.88641)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton3" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(103.23759, -103.23759)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton4" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(134.88641, -55.87178)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton5" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(146, 0)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton6" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(134.88641, 55.87178)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton7" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(103.23759, 103.23759)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton8" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(55.87178, 134.88641)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton9" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(8.939626e-15, 146)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton10" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(-55.87178, 134.88641)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton11" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(-103.23759, 103.23759)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton12" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(-134.88641, 55.87178)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton13" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(-146, 1.7879253e-14)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton14" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(-134.88641, -55.87178)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton15" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(-103.23759, -103.23759)
+scale = Vector2(1, 1)
+
+[node name="BeatTrumpetButton16" parent="TrompetRing" instance=ExtResource("4_5ts78")]
+position = Vector2(-55.87178, -134.88641)
+scale = Vector2(1, 1)
+
+[node name="Pointer" parent="." instance=ExtResource("6_nc0bc")]
+script = ExtResource("7_a5c8e")

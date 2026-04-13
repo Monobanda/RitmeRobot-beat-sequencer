@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3agsq8kdovh2"]
+
+[ext_resource type="Script" uid="uid://ijiojooa7kt4" path="res://Scripts/Objects/play_pause_button.gd" id="1_elsih"]
+[ext_resource type="Theme" uid="uid://de1ygy2rpeups" path="res://Assets/Themes/default_theme.tres" id="1_lmhiv"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_txfwm"]
+device = -1
+keycode = 32
+unicode = 32
+
+[sub_resource type="Shortcut" id="Shortcut_54biq"]
+events = [SubResource("InputEventKey_txfwm")]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_536cc"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="PlayPauseButtonHolder" type="Node2D"]
+script = ExtResource("1_elsih")
+
+[node name="PlayPauseButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme = ExtResource("1_lmhiv")
+theme_override_font_sizes/font_size = 34
+shortcut = SubResource("Shortcut_54biq")
+text = "⏯️
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="PlayPauseButton"]
+visible = false
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_536cc")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_up" from="PlayPauseButton" to="." method="_on_play_pause_button_button_up"]
+[connection signal="pressed" from="PlayPauseButton" to="." method="_on_play_pause_button_pressed"]

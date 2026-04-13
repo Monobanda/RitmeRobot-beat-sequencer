@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="beat_ring_button_resource" load_steps=5 format=3 uid="uid://b1y23v1qokfb"]
+
+[ext_resource type="Script" uid="uid://8kfvwo1wf6qc" path="res://Scripts/Resources/beat_ring_button_resource.gd" id="2_ax28e"]
+[ext_resource type="Texture2D" uid="uid://don2vtttob1ok" path="res://Assets/Sprites/New Assets/Art Assets/Shapes/Outlines/SHAPES_Orange_Empty.png" id="3_syc82"]
+[ext_resource type="Texture2D" uid="uid://eit88qu763uw" path="res://Assets/Sprites/New Assets/Art Assets/Shapes/Filled/SHAPES_Orange-Star.png" id="4_w3m0n"]
+[ext_resource type="Resource" uid="uid://upar0xbf2mum" path="res://Assets/Audio/default.tres" id="9_1xrib"]
+
+[resource]
+script = ExtResource("2_ax28e")
+back_up_bank = ExtResource("9_1xrib")
+Empty = ExtResource("3_syc82")
+Filled = ExtResource("4_w3m0n")
+metadata/_custom_type_script = "uid://8kfvwo1wf6qc"

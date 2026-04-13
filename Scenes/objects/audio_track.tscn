@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://di02eq5j45jpe"]
+
+[ext_resource type="Script" uid="uid://caqu1nsp621nr" path="res://Scripts/Objects/audio_track.gd" id="1_bfmnc"]
+
+[node name="AudioTrack" type="Node" node_paths=PackedStringArray("players")]
+script = ExtResource("1_bfmnc")
+players = [NodePath("Primary_player"), NodePath("Recording_player")]
+
+[node name="Primary_player" type="AudioStreamPlayer" parent="."]
+
+[node name="Recording_player" type="AudioStreamPlayer" parent="."]

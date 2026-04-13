@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl2xom115gakl"]
+
+[ext_resource type="Script" uid="uid://dp2cpl630ig2n" path="res://Scripts/Objects/countdown.gd" id="1_kbcfv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tmk0j"]
+font_size = 100
+
+[node name="Countdown" type="Node2D"]
+script = ExtResource("1_kbcfv")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -31.0
+offset_top = -45.0
+offset_right = 9.0
+offset_bottom = -5.0
+scale = Vector2(1.9412285, 2.52473)
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -74.0
+offset_right = 108.0
+offset_bottom = 71.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_tmk0j")

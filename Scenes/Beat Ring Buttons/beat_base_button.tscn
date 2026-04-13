@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://baearr6iwkkyj"]
+
+[ext_resource type="Script" uid="uid://bejulwkgf7j2c" path="res://Scripts/Objects/beat_ring_button.gd" id="1_yfu8y"]
+[ext_resource type="Texture2D" uid="uid://don2vtttob1ok" path="res://Assets/Sprites/New Assets/Art Assets/Shapes/Outlines/SHAPES_Orange_Empty.png" id="2_losl5"]
+[ext_resource type="Texture2D" uid="uid://eit88qu763uw" path="res://Assets/Sprites/New Assets/Art Assets/Shapes/Filled/SHAPES_Orange-Star.png" id="3_vywwd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v5ssc"]
+radius = 14.035668
+
+[node name="BeatStompButton" type="Node2D"]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_yfu8y")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -4)
+scale = Vector2(1.5, 1.5)
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_v5ssc")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -28.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 28.0
+action_mode = 0
+
+[node name="Ring" type="Sprite2D" parent="."]
+texture = ExtResource("2_losl5")
+
+[node name="Filling" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_vywwd")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

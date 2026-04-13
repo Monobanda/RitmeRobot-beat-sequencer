@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp3x302n4n3se"]
+
+[ext_resource type="PackedScene" uid="uid://baearr6iwkkyj" path="res://Scenes/Beat Ring Buttons/beat_base_button.tscn" id="1_yv363"]
+[ext_resource type="Resource" uid="uid://b1y23v1qokfb" path="res://Resources/Beat Button/beat_klap_button.tres" id="2_h58b8"]
+
+[node name="BeatKlapButton" instance=ExtResource("1_yv363")]
+resource = ExtResource("2_h58b8")

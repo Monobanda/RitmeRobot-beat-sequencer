@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://0ok1ysn3laip"]
+
+[ext_resource type="Script" uid="uid://b8fa5smifqh0v" path="res://Scripts/Audio/voice_recording.gd" id="1_kechc"]
+[ext_resource type="Texture2D" uid="uid://cygipfcbp2so3" path="res://Assets/Sprites/New Assets/Art Assets/Shapes/Filled/SHAPES_Yellow_Ring.png" id="2_4r45h"]
+[ext_resource type="Texture2D" uid="uid://bs4pggla5piq3" path="res://Assets/PNGs/Icons-_28_0004_Microphone.png" id="2_te6gq"]
+[ext_resource type="Texture2D" uid="uid://jyub5ikskuct" path="res://Assets/Sprites/New Assets/Art Assets/Shapes/Outlines/SHAPES_Yellow_Empty.png" id="3_qw2oa"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_kechc"]
+
+[node name="VoiceRecording" type="Node2D"]
+physics_interpolation_mode = 2
+script = ExtResource("1_kechc")
+
+[node name="Voice button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -50.5
+offset_right = 62.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4142118, 1.3659954)
+theme_override_font_sizes/font_size = 40
+flat = true
+icon_alignment = 1
+
+[node name="mic Icon" type="Sprite2D" parent="Voice button"]
+position = Vector2(62.579025, 44.290047)
+scale = Vector2(0.56629133, 0.49428073)
+texture = ExtResource("2_te6gq")
+
+[node name="Recorded" type="Sprite2D" parent="Voice button"]
+visible = false
+position = Vector2(62.579033, 49.414513)
+texture = ExtResource("2_4r45h")
+
+[node name="Empty" type="Sprite2D" parent="Voice button"]
+position = Vector2(62.932587, 48.316414)
+texture = ExtResource("3_qw2oa")
+
+[node name="iostreamrecord" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamMicrophone_kechc")
+autoplay = true
+bus = &"Microphone"
+
+[connection signal="pressed" from="Voice button" to="." method="_on_voice_button_pressed"]

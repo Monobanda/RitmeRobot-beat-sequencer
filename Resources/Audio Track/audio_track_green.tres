@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="audio_track_resource" load_steps=3 format=3 uid="uid://cb7fdcw0amy4u"]
+
+[ext_resource type="Script" uid="uid://t1ud06a3y3tj" path="res://Scripts/Resources/audio_track_resource.gd" id="1_lb56g"]
+[ext_resource type="Resource" uid="uid://e6b7osebmyb0" path="res://Assets/Audio/default.tres" id="1_ryn63"]
+
+[resource]
+script = ExtResource("1_lb56g")
+back_up_bank = ExtResource("1_ryn63")
+metadata/_custom_type_script = "uid://t1ud06a3y3tj"

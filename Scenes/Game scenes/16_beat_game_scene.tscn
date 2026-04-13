@@ -1,0 +1,76 @@
+[gd_scene load_steps=17 format=3 uid="uid://drve3dbd8563v"]
+
+[ext_resource type="Script" uid="uid://d1bdln6uwrmsj" path="res://Scripts/PackedScenes/16_beat_game_scene.gd" id="1_2x8cw"]
+[ext_resource type="PackedScene" uid="uid://k50godrgagpl" path="res://Scenes/objects/sequenser.tscn" id="2_8swkw"]
+[ext_resource type="PackedScene" uid="uid://bl2xom115gakl" path="res://Scenes/objects/Countdown.tscn" id="2_nwhfo"]
+[ext_resource type="PackedScene" uid="uid://di02eq5j45jpe" path="res://Scenes/objects/audio_track.tscn" id="3_nwhfo"]
+[ext_resource type="Resource" uid="uid://c4aoy3156nbvg" path="res://Resources/Beat Button/beat_stomp_button.tres" id="4_6jkek"]
+[ext_resource type="Resource" uid="uid://upar0xbf2mum" path="res://Assets/Audio/default.tres" id="4_8swkw"]
+[ext_resource type="Resource" uid="uid://b1y23v1qokfb" path="res://Resources/Beat Button/beat_klap_button.tres" id="5_fteje"]
+[ext_resource type="Resource" uid="uid://ohdqwhjs2otw" path="res://Resources/Beat Button/beat_snare_button.tres" id="6_u4cyv"]
+[ext_resource type="Resource" uid="uid://77glw7d08e2h" path="res://Resources/Beat Button/beat_hihat_button.tres" id="7_vx53l"]
+[ext_resource type="Resource" uid="uid://cb7fdcw0amy4u" path="res://Resources/Audio Track/audio_track_green.tres" id="8_140q0"]
+[ext_resource type="PackedScene" uid="uid://bpbqks1sddams" path="res://Scenes/objects/beat_ring_16.tscn" id="10_5qgb8"]
+[ext_resource type="PackedScene" uid="uid://d3agsq8kdovh2" path="res://Scenes/objects/play_pause_button.tscn" id="11_yunsb"]
+[ext_resource type="PackedScene" uid="uid://0ok1ysn3laip" path="res://Scenes/General/voice_recording.tscn" id="12_s4hjj"]
+[ext_resource type="Texture2D" uid="uid://b4va4wy848jah" path="res://Assets/Sprites/New Assets/Art Assets/Backgrounds/_0001_BG-Inverse-1080p.png" id="13_aive0"]
+[ext_resource type="Texture2D" uid="uid://d4ey4wjaxtguo" path="res://Assets/Sprites/New Assets/Art Assets/Backgrounds/Gradient Top Grey.png" id="14_2o0hg"]
+[ext_resource type="Texture2D" uid="uid://3sxfmvrfe00l" path="res://Assets/Sprites/New Assets/Art Assets/Backgrounds/Gradient Top Purple.png" id="15_2gjtd"]
+
+[node name="16BeatGameScene" type="Node2D"]
+script = ExtResource("1_2x8cw")
+
+[node name="Countdown" parent="." instance=ExtResource("2_nwhfo")]
+visible = false
+z_index = 99
+position = Vector2(531, 399)
+
+[node name="Sequencer" parent="." instance=ExtResource("2_8swkw")]
+notes_per_beat = 16
+
+[node name="Audio_tracks" type="Node" parent="."]
+
+[node name="Stomp_track" parent="Audio_tracks" instance=ExtResource("3_nwhfo")]
+bank = ExtResource("4_8swkw")
+beat_ring_resource = ExtResource("4_6jkek")
+
+[node name="Klap_track" parent="Audio_tracks" instance=ExtResource("3_nwhfo")]
+bank = ExtResource("4_8swkw")
+beat_ring_resource = ExtResource("5_fteje")
+
+[node name="snare_track" parent="Audio_tracks" instance=ExtResource("3_nwhfo")]
+bank = ExtResource("4_8swkw")
+beat_ring_resource = ExtResource("6_u4cyv")
+
+[node name="hihat_track" parent="Audio_tracks" instance=ExtResource("3_nwhfo")]
+bank = ExtResource("4_8swkw")
+beat_ring_resource = ExtResource("7_vx53l")
+
+[node name="green_synth_track" parent="Audio_tracks" instance=ExtResource("3_nwhfo")]
+track_resource = ExtResource("8_140q0")
+
+[node name="BeatRing" parent="." instance=ExtResource("10_5qgb8")]
+position = Vector2(531, 399)
+
+[node name="PlayPauseButtonHolder" parent="BeatRing" instance=ExtResource("11_yunsb")]
+position = Vector2(5, 0)
+
+[node name="VoiceRecording" parent="." instance=ExtResource("12_s4hjj")]
+position = Vector2(60, 104)
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -2
+follow_viewport_enabled = true
+follow_viewport_scale = 0.75
+
+[node name="Background" type="Sprite2D" parent="Background"]
+position = Vector2(636, 356)
+texture = ExtResource("13_aive0")
+
+[node name="Gradient Grey" type="Sprite2D" parent="Background"]
+position = Vector2(628, 360)
+texture = ExtResource("14_2o0hg")
+
+[node name="Gradient Purple" type="Sprite2D" parent="Background"]
+position = Vector2(628, 360)
+texture = ExtResource("15_2gjtd")

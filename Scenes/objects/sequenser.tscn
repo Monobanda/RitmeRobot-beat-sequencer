@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://k50godrgagpl"]
+
+[ext_resource type="Script" uid="uid://b2427xd3bd0pa" path="res://Scripts/Audio/sequenzer.gd" id="1_8hf5b"]
+
+[node name="sequenser" type="Node"]
+script = ExtResource("1_8hf5b")
+bpm = 60.0
+notes_per_beat = 8
+beats_per_section = 2

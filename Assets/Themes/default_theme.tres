@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://de1ygy2rpeups"]
+
+[sub_resource type="SystemFont" id="SystemFont_mco5i"]
+
+[resource]
+Button/fonts/font = SubResource("SystemFont_mco5i")
+Label/fonts/font = null

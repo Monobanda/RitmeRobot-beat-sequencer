@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="sound_setting" load_steps=2 format=3 uid="uid://bhchu00jdgeem"]
+
+[ext_resource type="Script" uid="uid://dinc7qxvyoa0r" path="res://Scripts/Resources/sound_settings.gd" id="1_2bdjl"]
+
+[resource]
+script = ExtResource("1_2bdjl")
+name = "default"
+bpm = 70
+themes = Array[String](["💔", "🌴", "⏳️", "🌍", "🐾", "🫶"])
+emotions = Array[String](["🤔"])
+metadata/_custom_type_script = "uid://dinc7qxvyoa0r"
